@@ -5,12 +5,12 @@ const ContactForm = ({ addContact }) => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    addContact({ name, number });
-    setName('');
-    setNumber('');
-  };
+const handleSubmit = (e) => {
+  e.preventDefault();
+  
+  setName('');
+  setNumber('');
+};
 
   return (
     <form onSubmit={handleSubmit}>
@@ -20,7 +20,7 @@ const ContactForm = ({ addContact }) => {
         name="name"
         value={name}
         onChange={(e) => setName(e.target.value)}
-        pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+        pattern="^[a-zA-Zа-яА-Я]+(([' ][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
         title="Name"
         required
       />

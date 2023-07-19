@@ -7,7 +7,7 @@ import { nanoid } from 'nanoid';
 
 const App = () => {
   const [contacts, setContacts] = useState([]);
-  const [name, setName] = useState('');
+  
   const [filter, setFilter] = useState('');
 
   const addContact = (name, number) => {
